@@ -21,5 +21,12 @@ library(ggplot2)
 library(scales)
 library(forcats)
 library(lubridate)
+
+homicides_url <- paste0("https://raw.githubusercontent.com/washingtonpost/",
+                        "data-homicides/refs/heads/master/homicide-data.csv")
+
+homicides <- read_csv(homicides_url) %>%
+  unite(city_name, city, state, sep = ",", remove =FALSE)
+
 ```
 
