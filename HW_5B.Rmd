@@ -28,5 +28,8 @@ homicides_url <- paste0("https://raw.githubusercontent.com/washingtonpost/",
 homicides <- read_csv(homicides_url) %>%
   unite(city_name, city, state, sep = ",", remove =FALSE)
 
+
+homicides$reported_date <- as.Date(as.character(homicides$reported_date),
+                                   format = "%Y%m%d")
 ```
 
