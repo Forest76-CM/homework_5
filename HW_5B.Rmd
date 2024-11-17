@@ -1,0 +1,25 @@
+---
+title: "HW_5_B"
+author: "Jered May"
+date: "2024-11-17"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#Load Data and Libraries 
+```{r}
+library(dplyr)
+library(tidyr)
+library(stringr)
+library(readr)
+library(purrr)
+library(broom)
+library(ggplot2)
+library(scales)
+library(forcats)
+library(lubridate)
+```
+
