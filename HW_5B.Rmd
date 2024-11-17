@@ -36,3 +36,13 @@ homicides$reported_date <- as.Date(as.character(homicides$reported_date),
 print(class(homicides$reported_date))
 ```
 
+# Debuging 
+```{r}
+# Debugging 
+tulsa_records <- homicides %>%
+  filter(city == "Tulsa",
+         victim_last == "HARRIS")
+print(tulsa_records, width = Inf)
+
+```
+
