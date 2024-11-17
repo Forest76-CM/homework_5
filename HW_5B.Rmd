@@ -31,5 +31,8 @@ homicides <- read_csv(homicides_url) %>%
 
 homicides$reported_date <- as.Date(as.character(homicides$reported_date),
                                    format = "%Y%m%d")
+
+# confirm reported_date is a Date class
+print(class(homicides$reported_date))
 ```
 
