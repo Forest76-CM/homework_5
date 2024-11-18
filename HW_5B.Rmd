@@ -110,7 +110,10 @@ ggplot(monthly_counts, aes(x = date, y = count, fill = season)) +
    labs(
     x = "Date",
     y = "Monthly homicides",
-    title = "Homicides in Baltimore, MD")
+    title = "Homicides in Baltimore, MD") +
+  theme_dark() +
+  scale_y_continuous(
+    limits = c(0, max(monthly_counts$count)))
 ```
 
 
