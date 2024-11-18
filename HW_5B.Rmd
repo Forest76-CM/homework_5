@@ -72,5 +72,22 @@ Baltimore_homicides <- homicides %>%
     )
   )
 
+#Counts
+monthly_counts <- Baltimore_homicides %>%
+  group_by(year, month, season) %>%
+  nest() %>%
+  mutate(
+    count = map_int(data, nrow)
+    ) %>%
+  ungroup() %>%
+  mutate(
+    date = make_date(year, month, 1)
+  ) %>%
+  select(year, month, count, season, date)
+
+
+print(monthly_counts)
+
+
 ```
 
