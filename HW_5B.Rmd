@@ -57,3 +57,20 @@ print(tulsa_records, width = Inf)
 
 ```
 
+# Filter
+```{r}
+# filtering for Baltimore homicides with seasons
+Baltimore_homicides <- homicides %>%
+  filter(city_name == "Baltimore, MD") %>%
+  mutate(
+    reported_date = ymd(reported_date),
+    year = year(reported_date),
+    month = month(reported_date),
+    season = case_when(
+      month %in% c(05, 06, 07, 08, 09, 10) ~ "Summer",
+      TRUE ~ "Winter"
+    )
+  )
+
+```
+
