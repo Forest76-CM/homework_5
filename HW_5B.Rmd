@@ -106,7 +106,11 @@ ggplot(monthly_counts, aes(x = date, y = count, fill = season)) +
            label = ("Arrest of\nFreddie Gray"), 
            color = "white", 
            hjust = 1.13,
-           vjust = -1) 
+           vjust = -1) +
+   labs(
+    x = "Date",
+    y = "Monthly homicides",
+    title = "Homicides in Baltimore, MD")
 ```
 
 
