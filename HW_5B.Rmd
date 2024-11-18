@@ -44,5 +44,10 @@ tulsa_records <- homicides %>%
          victim_last == "HARRIS")
 print(tulsa_records, width = Inf)
 
+# mutating the one record of Tulsa, AL
+homicides <- read_csv(homicides_url) %>%
+  mutate(state = if_else(city == "Tulsa", "OK", state)) %>%
+  unite(city_name, city, state, sep =", ", remove = FALSE)
+
 ```
 
