@@ -93,7 +93,7 @@ print(monthly_counts)
 
 
 #Graph
-```{r}
+```{r fig.width=12,fig.height=3}
 # Plot with ggplot2
 ggplot(monthly_counts, aes(x = date, y = count, fill = season)) +
   geom_bar(stat = "identity", position = "dodge") +
