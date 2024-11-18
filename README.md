@@ -1,3 +1,3 @@
-# Graph showing monthly homicides for Baltimore, MD. To view graph use HW_5B.Rmd
+# Project to complete assigment five for ERHS 535. This code creates a graph to show monthly homicides in Baltimore, MD between 2007 to 2018. 
 
-## Data retrived from the Washington Post 
+## Data used in this analysis was retrived from the Washington Post. 
