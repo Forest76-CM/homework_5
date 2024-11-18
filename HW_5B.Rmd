@@ -91,3 +91,15 @@ print(monthly_counts)
 
 ```
 
+
+#Graph
+```{r}
+# Plot with ggplot2
+ggplot(monthly_counts, aes(x = date, y = count, fill = season)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  scale_fill_manual(values = c("Summer" = "gray", "Winter" = "lightblue")) +
+  geom_vline(xintercept = as.Date("2015-04-01"), linetype = "longdash",
+             color = "red", size = 1) 
+```
+
+
