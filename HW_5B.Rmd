@@ -49,5 +49,11 @@ homicides <- read_csv(homicides_url) %>%
   mutate(state = if_else(city == "Tulsa", "OK", state)) %>%
   unite(city_name, city, state, sep =", ", remove = FALSE)
 
+# Check to see that the single Tulsa, AL record is changed
+tulsa_records <- homicides %>%
+  filter(city == "Tulsa",
+         victim_last == "HARRIS")
+print(tulsa_records, width = Inf)
+
 ```
 
