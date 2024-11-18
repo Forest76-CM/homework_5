@@ -99,7 +99,14 @@ ggplot(monthly_counts, aes(x = date, y = count, fill = season)) +
   geom_bar(stat = "identity", position = "dodge") +
   scale_fill_manual(values = c("Summer" = "gray", "Winter" = "lightblue")) +
   geom_vline(xintercept = as.Date("2015-04-01"), linetype = "longdash",
-             color = "red", size = 1) 
+             color = "red", size = 1) +
+  annotate("text", 
+           x = as.Date("2015-04-12"), 
+           y = max(monthly_counts$count) - 19,  
+           label = ("Arrest of\nFreddie Gray"), 
+           color = "white", 
+           hjust = 1.13,
+           vjust = -1) 
 ```
 
 
