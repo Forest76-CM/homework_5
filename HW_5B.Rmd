@@ -113,7 +113,12 @@ ggplot(monthly_counts, aes(x = date, y = count, fill = season)) +
     title = "Homicides in Baltimore, MD") +
   theme_dark() +
   scale_y_continuous(
-    limits = c(0, max(monthly_counts$count)))
+    limits = c(0, max(monthly_counts$count))) +
+  theme(legend.position = "bottom") +
+  guides(fill = guide_legend(title = NULL)) +
+  geom_smooth(aes(group = 1), method = "loess", color = "blue", span = 0.1,
+              se = FALSE, show.legend =FALSE) 
+  
 ```
 
 
